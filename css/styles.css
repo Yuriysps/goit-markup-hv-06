@@ -616,8 +616,8 @@ p {
 
 /*=============== form-field-wrapper ===== */
 
-.footer-subscribe-box {
-}
+/* .footer-subscribe-box {
+} */
 
 .footer-description {
   display: block;
@@ -863,8 +863,8 @@ p {
 .modal-form-privacy-wrapper {
   margin-bottom: 24px;
 }
-.modal-form-privacy {
-}
+/* .modal-form-privacy {
+} */
 
 .modal-form-privacy-label {
   font-weight: 400;
@@ -1002,8 +1002,8 @@ p {
   flex-direction: column;
   gap: 40px;
 }
-.mobile-menu-nav-item {
-}
+/* .mobile-menu-nav-item {
+} */
 .mobile-menu-nav-link {
   font-weight: 700;
   font-size: 36px;
