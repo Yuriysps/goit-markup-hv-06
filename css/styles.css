@@ -405,6 +405,10 @@ p {
   padding: 32px 0;
 }
 
+.team-item-id .icon-list {
+  padding-top: 8px;
+}
+
 .team-item-header {
   text-transform: capitalize;
   line-height: 1.2;
@@ -503,6 +507,17 @@ p {
   overflow: hidden;
 
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.portfolio-item-id {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+}
+
+.portfolio-item-header {
+  line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .portfolio-item:hover .portfolio-overlay-text {
