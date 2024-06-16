@@ -131,6 +131,11 @@ p {
   color: #2e2f42;
 }
 
+.header-mob-burger {
+  bottom: none;
+  background: transparent;
+}
+
 @media screen and (max-width: 767px) {
   .header-navigation,
   .header-adress {
@@ -197,6 +202,15 @@ p {
     display: flex;
     column-gap: 40px;
   }
+
+  .header-adress-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -231,13 +245,19 @@ p {
       rgba(46, 47, 66, 0.7)
     ),
     url(../images/background_img/people-office-mob.jpg);
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../images/background_img/people-office-mob@2x.jpg);
+
   background-repeat: no-repeat;
   background-position: center;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 2dppx),
+  (min-resolution: 192dpi) {
+  .hero-section {
+    background-image: linear-gradient
+        (rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/background_img/people-office-mob@2x.jpg);
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -257,6 +277,16 @@ p {
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient
+          (rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/background_img/people-office-tab@2x.jpg);
+    }
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -266,17 +296,21 @@ p {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
-      ),
+      )
       url(../images/background_img/people-office-desk.jpg);
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/background_img/people-office-desk@2x.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+  }
+
+  @media screen and (-webkit-min-device-pixel-ratio: 2),
+    (min-resolution: 2dppx),
+    (min-resolution: 192dpi) {
+    .hero-section {
+      background-image: linear-gradient
+          (rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/background_img/people-office-desk@2x.jpg);
+    }
   }
 }
+
 .hero-header {
   color: #ffffff;
   max-width: 496px;
@@ -383,6 +417,7 @@ p {
   padding-top: 96px;
 } */
 .team-section {
+  background-color: #f4f4fd;
   padding-top: 96px;
   padding-bottom: 96px;
 }
@@ -423,6 +458,12 @@ p {
 @media screen and (max-width: 767px) {
   .team-container {
     width: 296px;
+  }
+
+  .team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
@@ -553,6 +594,11 @@ p {
     padding-bottom: 96px;
   }
 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
   /* .portfolio-header {
     margin-top: 96px;
   } */
@@ -649,12 +695,12 @@ p {
   color: #f4f4fd;
   /* max-width: 264px;
   max-width: 364px; */
-  min-width: 264px;
+  max-width: 264px;
 }
 
-.footer-icon-box {
+/* .footer-icon-box {
   margin-right: 80px;
-}
+} */
 .footer-icon-header {
   font-weight: 500;
   font-size: 16px;
@@ -702,7 +748,8 @@ p {
   display: flex;
 
   background-color: #4d5ae5;
-  min-width: 165px;
+  /* min-width: 165px; */
+  width: 165px;
   height: 40px;
   padding: 8px 24px;
   justify-content: center;
@@ -727,10 +774,45 @@ p {
 .subscribe-email-btn-icon {
   margin-left: 16px;
 }
+@media screen and (max-width: 767px) {
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    /* align-self: center; */
+  }
+  .footer-text {
+    text-align: left;
+  }
+  .footer-logopicon-box {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+  }
+
+  .footer-box-logoplusp {
+    text-align: center;
+  }
+
+  .footer-icon-box {
+    text-align: center;
+  }
+
+  .footer-subscribe-box {
+    text-align: center;
+  }
+  .subscribe-email-btn {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-box {
     width: 584px;
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
   }
 
   .footer-logopicon-box {
@@ -752,6 +834,13 @@ p {
     display: flex;
     flex-direction: row;
     gap: 24px;
+  }
+  .footer-box-logoplusp {
+    margin-right: 120px;
+  }
+
+  .footer-icon-box {
+    margin-right: 80px;
   }
   .footer-subscribe-form {
     display: flex;
@@ -1124,6 +1213,7 @@ p {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
   display: flex;
+  bottom: none;
   justify-content: center;
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -1179,6 +1269,7 @@ p {
   letter-spacing: 0.02em;
   color: #434455;
   font-style: normal;
+  flex-grow: 1;
 }
 
 .mobile-menu-address-link:hover,
